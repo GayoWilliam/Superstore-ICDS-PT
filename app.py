@@ -17,12 +17,12 @@ sidebar = dbc.Col(
             )
         ) for page in dash.page_registry.values()
     ],
-    className="bg-success",
+    className="bg-success min-vh-100",
     width={"size" : 2}
 )
 
 charts = dbc.Col(
-    dash.page_container
+    dash.page_container,
 )
 
 # Create the app components that will be displayed in my web browser
@@ -36,7 +36,7 @@ app.layout = dbc.Container(
             ]
         )
     ],
-    className="bg-black",
+    class_name="bg-black min-vh-100", # Set the minimum height to that of the screen
     fluid = True
 )
 
